@@ -20,8 +20,10 @@ console.log(command)
 }
 
 const instructions = document.querySelector(".instructions");
+var secretNumber = pickRandom ();   
+var result = secretNumber / 2;
 
-var commands = ["Agora multiplica por 2...", "Adiciona mais " +  pickRandom(), "Agora dividade por 2...", "Menos o primeiro número que você pensou...", "Fale: 'resultado'"];
+var commands = ["Agora multiplica por 2...", "Adiciona mais " +  secretNumber, "Agora dividade por 2...", "Menos o primeiro número que você pensou...", "Fale: 'resultado'"];
 const spinNo = "class = img__card";
 const spinYes = "class = img__card spin__card";
 var imgClass = [spinNo, spinYes, spinNo, spinYes, spinNo, spinYes];
@@ -32,8 +34,6 @@ function pickRandom(){
     return Math.round((Math.random() * 100 + 1));   
 }
 
-var secretNumber = pickRandom ();   
-var result = secretNumber / 2;
 const textCommad = document.querySelector(".p1");
 
 restart();
@@ -82,20 +82,3 @@ document.body.innerHTML = `<div class="result__box"><h3 class="h3__result">O res
 }
 
 
-
-
-/*Este jogo foi baseado no curso de JavaScript da Alura, utilizando reconhecimento de voz através da "Web speech API". O objetivo do jogo e fazer calculos a partir de um 
-número de escolha do jogador, sem qualquer inserção d einformação na aplicação, e o reultado final será adivinhado pelo jogo.
-    As técnologias utilizadas foram:
-    *Html 5
-    *Css 3
-    * JavaScript
-    * Web speech API
-    
-    Estrutura:
-    1. Captar o comando de voz em forma de string e armazenar dentro de uma variável.
-    2. 
-
-    Tive grandes dificuldades para encontar uma solução na mudança de ins condicional
-
-*/
