@@ -1,0 +1,119 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+
+
+:root{
+    --font:'Nanum Gothic Coding', monospace; 
+    --bg-up-color: 03001C;
+    --bg-middle-color: #58210c #61250d #712a0e #5a210d #4e1d0c;
+    --text-color:#868686;
+    --text-color-2: #a7a7a7 ;
+    --mistery: #ff662a;
+}
+
+body{
+    font-family: var(--font);
+    font-weight: 700;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    text-align: center;
+    background: linear-gradient(180deg, #03001C 33%, #58210c, #61250d, #712a0e, #5a210d, #4e1d0c);
+    color:var(--text-color-2);
+    border: 2px solid var(--text-color);
+    margin: 0.6em;
+
+}
+
+.main__title{
+    font-size: 3.5em;
+    color: var(--mistery);
+    margin: 0.2em auto 0.3em auto;
+}
+ 
+
+h3{
+    font-size: 1.5em ;
+    margin: 0.5em 0.2;
+    
+
+}
+
+.img__card{
+    width: 20vw;
+    margin-top: 1em;
+}
+
+.spin__card{
+    animation: spin 2s  linear;
+    width: 20vw;
+}
+
+@keyframes spin{
+    from {
+        transform: rotatey(0deg);
+    }
+
+    to{
+        transform: rotatey(360deg);
+    }
+
+    }
+
+
+.p1, .p2{
+    margin: 0.5em auto;
+}
+
+.p1{
+    font-weight: 700;
+    font-size: 36px;
+    color: black;
+}
+
+.p2{
+    font-size: 22px;
+}
+
+.instructions{
+    margin-bottom: 0.5em;
+    font-size: 36px;
+    color: darkblue;
+}
+
+.result__box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;  
+    text-align: center;
+}
+
+.h3__result{
+    color: goldenrod;
+    font-size: 3em;
+    margin: 0.5em;
+}
+
+.number__result{
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 20px 0;
+    width: 13vw;
+}
+
+@media screen and (max-width: 768px) {
+    .h3__result{
+        font-size: 2.5em;
+    }
+
+    .number__result{
+        width: 30vw;
+
+    }
+
+    
+}
